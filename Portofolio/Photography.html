@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photography Portfolio</title></head>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+font-family: 'Dancing Script', cursive;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.hero {
+background: url('https://source.unsplash.com/1600x900/?camera,photography') no-repeat center center/cover;
+height: 80vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+color: rgb(63, 41, 143);
+position: relative;
+overflow: hidden;
+}
+
+.hero h1 {
+font-family: 'Dancing Script', cursive;
+font-size: 4rem;
+}
+.hero p {
+font-size: 1.25rem;
+}
+.hero .btn-primary {
+background-color: rgb(151, 26, 111);
+border-color: burlywood;
+transition: background-color 0.3s ease;
+}
+.hero .btn-primary:hover {
+background-color: rgb(222, 135, 205);
+border-color: burlywood;
+}
+.featured-categories {
+background-color: whitesmoke;
+padding: 60px 0;
+}
+.category-card {
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+.category-card:hover {
+transform: scale(1.05);
+}
+.gallery img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+transition: transform 0.3s ease;
+cursor: pointer;
+}
+.gallery img:hover {
+transform: scale(1.05);
+}
+.modal-content {
+background-color: rgb(28, 28, 28);
+border: none;
+border-radius: 10px;
+}
+.modal-body img {
+border-radius: 10px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.navbar {
+background-color: rgba(12, 12, 12, 0.8);
+}
+.navbar-brand {
+font-family: 'Dancing Script', cursive;
+font-size: 2rem;
+}
+.navbar-nav .nav-link {
+font-size: 1.1rem;
+margin-left: 20px;
+transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+color: rgb(7, 7, 7);
+}
+#about img {
+border-radius: 50%;
+max-width: 100%;
+border: 4px solid rgb(255, 255, 255);
+box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+}
+footer {
+background-color: rgb(40, 40, 40);
+color: white;
+padding: 30px 0;
+}
+footer a {
+color: orange;
+text-decoration: none;
+margin: 0 15px;
+}
+footer a:hover {
+text-decoration: underline;
+}
+.form-control {
+border-radius: 25px;
+}
+.btn-success {
+border-radius: 25px;
+transition: background-color 0.3s ease;
+}
+.btn-success:hover {
+background-color: greenyellow;
+}
+</style>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+<a class="navbar-brand" href="#">PhotoGallery</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+<header class="hero">
+<div class="container text-center">
+<h1>Capturing Moments, Creating Memories</h1>
+<p>Explore my photography portfolio</p>
+<p>Every shot is an opportunity to capture a moment in time and convey a meaningful message through my lens.</p>
+</p>
+<a href="#gallery" class="btn btn-primary">View Gallery</a>
+</div>
+</header>
+<section id="about" class="container mt-5">
+<h2 class="text-center mb-4">About Me</h2>
+<div class="row">
+<div class="col-md-4">
+<img src="20240730_181700.jpg" alt="Portrait Image" style="width: 300px;">
+</div>
+<div class="col-md-8">
+<p>Hey, This is Lokesh Jilakara. As a professional photographer, I'm a 20 years old passionate photographer.As a professional photographer,I'm passionate about creating breathtaking images. From intimate portraits to stunning landscapes. Let's make something lovely together. 
+</p>
+</div>
+</div>
+</section>
+<section class="featured-categories text-center">
+<h2 class="mb-4">Featured Photography Categories</h2>
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<div class="category-card p-4">
+<h4>Portrait Photography</h4>
+<p>Capturing the essence of people and their emotions through close-up shots.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="category-card p-4">
+<h4>Landscape Photography</h4>
+<p>Exploring natural beauty through breathtaking landscapes and nature shots.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="category-card p-4">
+<h4>Event Photography</h4>
+<p>Documenting special moments at events, celebrations, and parties.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="gallery" class="container mt-5">
+<h2 class="text-center mb-4">Photography Gallery</h2>
+<div class="row">
+<div class="col-md-4">
+<img src="20240805_082307.heic" class="img-fluid" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="openLightbox(this.src)">
+</div>
+<div class="col-md-4">
+<img src="flower.jpg" class="img-fluid" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="openLightbox(this.src)">
+</div>
+<div class="col-md-4">
+<img src="20240521_184541.jpg" class="img-fluid" data-bs-toggle="modal" data-bs-target="#lightboxModal" onclick="openLightbox(this.src)">
+</div>
+</div>
+</section>
+<section class="container text-center mt-5">
+<h2>What Clients Say</h2>
+<div class="row">
+<div class="col-md-4">
+<blockquote>"The photos captured by Lokesh are absolutely stunning! I couldn't be happier with the results!" - Abhinav T.</blockquote>
+</div>
+<div class="col-md-4">
+<blockquote>"A truly talented photographer. Every photo tells a beautiful story." - Praneeth.</blockquote>
+</div>
+<div class="col-md-4">
+<blockquote>"An incredible experience working with Lokesh. Highly recommend!" - Aditya.</blockquote>
+</div>
+</div>
+</section>
+<section id="contact" class="container mt-5">
+<h2 class="text-center mb-4">Contact for Bookings</h2>
+<form>
+<div class="row">
+<div class="col-md-6">
+<input type="text" class="form-control mb-3" placeholder="Your Name" required>
+</div>
+<div class="col-md-6">
+<input type="email" class="form-control mb-3" placeholder="Your Email" required>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<input type="tel" class="form-control mb-3" placeholder="Your Phone Number" required>
+</div>
+</div>
+<textarea class="form-control mb-3" rows="5" placeholder="Your Message" required></textarea>
+<button type="submit" class="btn btn-success">Send Message</button>
+</form>
+</section>
+<section class="container text-center mt-5">
+<h2>Follow Me</h2>
+<a href="https://www.facebook.com/share/15tmAFYczq/" class="btn btn-primary m-2">Facebook</a>
+<a href="https://www.instagram.com/lokesh_jilakara?igsh=MWxzbXh2b2FocXZpYw==" class="btn btn-danger m-2">Instagram</a>
+</section>
+<footer>
+<p>&copy; 2025 PhotoGallery. All Rights Reserved.</p>
+</footer>
+<script>
+function openLightbox(imageSrc) {
+document.getElementById("lightboxImage").src = imageSrc;
+}
+</script>
+<script>
+function handleSubmit(event) {
+event.preventDefault();
+
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
+const phone = document.getElementById("phone").value;
+const message = document.getElementById("message").value;
+
+const namePattern = /^[A-Za-z\s]+$/;
+if (!namePattern.test(name)) {
+alert("Please enter a valid name (only alphabets allowed).");
+return;
+}
+
+const phonePattern = /^[0-9]{10}$/;
+if (!phonePattern.test(phone)) {
+alert("Please enter a valid phone number (only numbers allowed, 10 digits).");
+return;
+}
+
+const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+if (!emailPattern.test(email)) {
+alert("Please enter a valid email address.");
+return;
+}
+
+if (message.trim() === "") {
+alert("Please enter a message.");
+return;
+}
+
+console.log("Form submitted with the following information:");
+console.log("Name: ", name);
+console.log("Email: ", email);
+console.log("Phone: ", phone);
+console.log("Message: ", message);
+
+document.getElementById("contactForm").reset();
+alert("Thank you for your message, we will get back to you soon!");
+}
+
+document.getElementById("contactForm").addEventListener("submit", handleSubmit);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
